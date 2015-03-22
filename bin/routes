@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET		/home						controllers.Application.userCPanel()
+GET		/error						controllers.Application.error()
+GET		/studentlist				controllers.Application.studentlist()
+GET     /demo                       controllers.Application.demo()
+GET     /newthesis                  controllers.Thesises.newThesis()
+POST    /thesislist                  controllers.Thesises.save()
+GET     /thesislist                 controllers.Thesises.list(pape: Integer ?= 0, sortBy ?= "id", order ?= "asc", filter ?= "")
+# GET     /thesislist              controllers.Thesises.list(pape: Integer ?= 0, sortBy ?= "id", order ?= "asc", filter ?= "")
+POST     /authenticate              controllers.Application.authenticate()

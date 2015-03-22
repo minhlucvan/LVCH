@@ -1,0 +1,21 @@
+@(content: Html)
+@main("bang dieu khien") {
+<section id="container" >
+      @header()
+      @leftnavbar()
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+		<section id="main-content">
+          <section class="wrapper site-min-height">
+          	  @content
+			
+		</section>
+      </section> <!-- /MAIN CONTENT -->
+
+      <!--main content end-->
+      <!--footer start-->
+      @footer()
+  </section>
+}

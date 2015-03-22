@@ -1,0 +1,24 @@
+@(title: String = "SE_4")(content: String = "Đâng xây dựng hệ thống")
+<div class="panel panel-default">
+                        <div class="panel-heading">
+                           Thông Báo Mới
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel-group" id="accordion">
+                            @for(i <- 1 to 3){
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse@i" class="collapsed">#@i. @title</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse@i" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body">
+                                            @content
+                                        </div>
+                                    </div>
+                                </div>
+         					}
+                            </div>
+                        </div>
+                    </div>

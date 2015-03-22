@@ -1,0 +1,47 @@
+@(thesisForm: Form[Thesis])
+@import views.html.helper._
+@import views.html.helper.twitterBootstrap._
+
+@cpanellayout{
+<div class="row">
+<div class="panel panel-default">
+         <div class="panel-heading">
+                   <h3>Thêm Luận Văn<h3></h3>
+          </div>
+              <div class="panel-body">
+              	@form(routes.Thesises.save()) {
+        <fieldset>
+            <div class="form-group">
+            	@CSRF.formField
+            	@helper.inputText(thesisForm("code"), '_label -> "ID",
+                '_id -> "code",
+                'class -> "form-control",
+                '_help -> "")
+                
+                @helper.inputText(thesisForm("name"), '_label -> "name",
+                '_id -> "name",
+                'class -> "form-control",
+                '_help -> "")
+                
+                @helper.inputText(thesisForm("description"), '_label -> "des",
+                '_id -> "description",
+                'class -> "form-control",
+                '_help -> "")
+                
+                @helper.inputText(thesisForm("student"), '_label -> "stu",
+                '_id -> "student",
+                'class -> "form-control",
+                '_help -> "")
+                
+                @helper.inputText(thesisForm("instructor"), '_label -> "ins",
+                '_id -> "instructor",
+                'class -> "form-control",
+                '_help -> "")
+            </div>
+        </fieldset>
+        <input type="submit" value="submit" />
+    }
+             </div>
+          </div>
+</div>                        
+}	

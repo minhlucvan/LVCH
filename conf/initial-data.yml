@@ -1,0 +1,12 @@
+Admin:
+      - !!models.Admin
+        email: admin@tms.com
+        password: 1234
+Learner:
+      - !!models.Learner
+        email:       a@a.a
+        password:    aaa        
+Instructor:
+      - !!models.Instructor
+        email:      b@b.b
+        password:   bbb   

@@ -1,0 +1,15 @@
+@(n: Integer)
+<h3>GIÁO VIÊN ONLINE GẦN ĐÂY</h3>						
+@for(a <- 1 to n){ 						
+<!--  Member -->
+ <div class="desc">                                         
+	<div class="thumb">                     	
+		<img class="img-circle" src="@routes.Assets.at("assets/img/ui-zac.jpg")" width="35px" height="35px" align="">                     		
+	</div>
+	<div class="details">
+		<p><a href="#">Minh Mèo</a><br>
+			<muted>Online</muted>
+		</p>
+	</div>
+</div>
+}

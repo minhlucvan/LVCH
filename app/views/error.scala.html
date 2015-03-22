@@ -1,0 +1,35 @@
+@(error: String)
+@main("error") {
+<div class="container">
+	<div class="row">
+		<div class="panel panel-warning">
+			<div class="panel-body">
+				<span class="glyphicon glyphicon-alert erricon" aria-hidden="true"></span>
+				<div class="row"><h3 class="errname">error name</h3></div>
+				<div class="row"><h5 class="errdes">@error</h5></div>
+				<div class="row errnav">
+					<div class="col-md-3"></div>
+					<div class="col-md-2" style="text-align: left;">
+					<a href="#">
+					<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+					<span>&ensp;trở lại</span>
+					</a>
+					</div>
+					<div class="col-md-2" style="text-align: center;">
+					<a href="#">
+					<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+					<span>&ensp;tải lại</span>
+					</a>
+					</div>
+					<div class="col-md-2" style="text-align: right;">
+					<a href="#">
+					<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+					<span>&ensp;trang chủ</span>
+					</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+}
